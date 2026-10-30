@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b10">
+  <title>THE WIRED // Lain Archive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">L</span><span>THE WIRED<small>PERSONAL ARCHIVE / 1998</small></span></a>
+    <div class="status"><span class="status-dot"></span> CONNECTION: UNSTABLE</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">SERIAL EXPERIMENTS LAIN <span>///</span> DATABASE 01</div>
+      <h1>Present Day.<br><em>Present Time.</em></h1>
+      <p class="hero-copy">Where does the real world end, and the Wired begin?</p>
+      <div class="hero-bottom"><span>ARCHIVE ACCESS: GRANTED</span><span>NO. 0001—0006</span></div>
+    </section>
+
+    <section class="intro">
+      <div><p class="section-kicker">01 / INDEX</p><h2>Личный архив</h2></div>
+      <p class="muted">Выбери файл, чтобы открыть запись из базы данных.</p>
+    </section>
+
+    <div class="toolbar">
+      <label class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="ПОИСК ПО АРХИВУ..." autocomplete="off"></label>
+      <div class="filters" role="group" aria-label="Фильтр">
+        <button class="filter active" data-filter="all">ВСЁ</button>
+        <button class="filter" data-filter="character">ПЕРСОНАЖИ</button>
+        <button class="filter" data-filter="scene">СЦЕНЫ</button>
+      </div>
+    </div>
+
+    <section id="gallery" class="gallery" aria-live="polite"></section>
+    <p id="empty" class="empty" hidden>ЗАПИСИ НЕ НАЙДЕНЫ // TRY AGAIN</p>
+
+    <section class="terminal">
+      <div class="terminal-head"><span>WIRED_TERMINAL</span><span>● ● ●</span></div>
+      <p><span class="prompt">root@wired:~$</span> whoami</p>
+      <p class="terminal-output">You are connected. You are not alone.</p>
+      <p><span class="prompt">root@wired:~$</span> <span class="cursor">_</span></p>
+    </section>
+  </main>
+
+  <footer><span>© WIRED ARCHIVE — FAN PROJECT</span><span>LET'S ALL LOVE LAIN.</span></footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Закрыть окно" data-close>×</button>
+      <div class="modal-image-wrap"><img id="modal-image" alt=""><div id="modal-image-fallback" class="image-fallback large-fallback">IMAGE FILE NOT FOUND</div></div>
+      <div class="modal-content">
+        <p class="section-kicker" id="modal-code">FILE // 0001</p>
+        <h2 id="modal-title">Lain Iwakura</h2>
+        <p class="jp" id="modal-subtitle">岩倉 玲音</p>
+        <div class="data-row"><span>TYPE</span><strong id="modal-type">CHARACTER</strong></div>
+        <div class="data-row"><span>STATUS</span><strong id="modal-status">CONNECTED</strong></div>
+        <p id="modal-description" class="description"></p>
+        <p class="modal-note">[ RECORD OPENED — WIRED CONNECTION ACTIVE ]</p>
+      </div>
+    </article>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
